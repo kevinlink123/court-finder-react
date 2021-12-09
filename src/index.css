@@ -1,13 +1,34 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import '~leaflet/dist/leaflet.css';
+
+#map {
+  height: 500px;
+  width: 90%;
+  margin: auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.btn {
+  @apply py-2 px-4 rounded;
+}
+
+.btn-blue {
+  @apply bg-blue-500 text-white;
+}
+
+.btn-blue:hover {
+  @apply bg-blue-700;
+}
+
+.btn-black {
+  @apply text-center px-3 py-2 border rounded text-black border-black hover:bg-black hover:text-white hover:border-black;
+}
+
+.card {
+  @apply rounded-lg overflow-hidden shadow-lg;
+}
+
+.title {
+  @apply text-center font-mono text-3xl my-6 font-bold uppercase;
 }
